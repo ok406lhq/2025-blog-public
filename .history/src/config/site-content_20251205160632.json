@@ -1,7 +1,7 @@
 {
 	"meta": {
-		"title": "Momo's Blog",
-		"description": "Momo 的个人博客，记录前端开发、探索笔记。"
+		"title": "momo's Blog",
+		"description": "momo 的个人博客，记录前端开发、探索笔记。"
 	},
 	"theme": {
 		"colorBrand": "#de4331",

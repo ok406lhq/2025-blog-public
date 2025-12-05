@@ -1,7 +1,7 @@
 {
 	"meta": {
-		"title": "Momo's Blog",
-		"description": "Momo 的个人博客，记录前端开发、探索笔记。"
+		"title": "YYsuni",
+		"description": "YYsuni 的个人博客，记录前端开发、探索笔记。前端 UI 更新代码仓库。"
 	},
 	"theme": {
 		"colorBrand": "#de4331",
@@ -36,21 +36,21 @@
 		{
 			"id": "github",
 			"type": "github",
-			"value": "https://github.com/ok406lhq",
+			"value": "https://github.com/yysuni",
 			"label": "Github",
 			"order": 3
 		},
 		{
 			"id": "juejin",
 			"type": "juejin",
-			"value": "https://juejin.cn/user/4212984287600862",
+			"value": "https://juejin.cn/user/2427311675422382",
 			"label": "稀土掘金",
 			"order": 2
 		},
 		{
 			"id": "email",
 			"type": "email",
-			"value": "lslhq1127@gmail.com",
+			"value": "yysuni1001@gmail.com",
 			"label": "",
 			"order": 1
 		}
