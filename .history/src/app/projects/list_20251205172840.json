@@ -1,10 +1,9 @@
 [
 	{
-		"name": "Baby Songs",
+		"name": "Path Motion",
 		"year": 2025,
 		"description": "在线 svg path 工具，针对 path 绘制、压缩、运动等功能",
-		"image": "/images/baby.svg",
-		"url": "https://github.com/ok406lhq/BabySongs",
+		"image": "https://www.svgrepo.com/show/530280/baby.svg",
 		"tags": [
 			"App",
 			"Android",
