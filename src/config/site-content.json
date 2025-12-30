@@ -4,7 +4,7 @@
 		"description": "Momo 的个人博客，记录前端开发、探索笔记。"
 	},
 	"theme": {
-		"colorBrand": "#de4331",
+		"colorBrand": "#8A2484",
 		"colorPrimary": "#4E3F42",
 		"colorSecondary": "#7b888e",
 		"colorBrandSecondary": "#FCC841",
@@ -14,12 +14,11 @@
 		"colorArticle": "#ffffffcc"
 	},
 	"backgroundColors": [
-		"#FCC841",
-		"#DFEFFC",
-		"#DEDE92",
-		"#DE4331",
-		"#FE9750",
-		"#FCC841"
+		"#C8D317",
+		"#CA1B1D",
+		"#561987",
+		"#800312",
+		"#A38861"
 	],
 	"artImages": [
 		{
