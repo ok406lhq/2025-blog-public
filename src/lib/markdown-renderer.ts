@@ -1,6 +1,5 @@
 import { marked } from 'marked'
 import type { Tokens } from 'marked'
-import { codeToHtml } from 'shiki'
 
 export type TocItem = { id: string; text: string; level: number }
 
@@ -17,38 +16,72 @@ export function slugify(text: string): string {
 		.replace(/\s+/g, '-')
 }
 
+// Lazy load shiki to handle environments where it's not available (e.g., Cloudflare Workers)
+let shikiModule: typeof import('shiki') | null = null
+let shikiLoadAttempted = false
+
+async function loadShiki() {
+	if (shikiLoadAttempted) {
+		return shikiModule
+	}
+	shikiLoadAttempted = true
+
+	try {
+		shikiModule = await import('shiki')
+		return shikiModule
+	} catch (error) {
+		console.warn('Failed to load shiki module:', error)
+		return null
+	}
+}
+
 export async function renderMarkdown(markdown: string): Promise<MarkdownRenderResult> {
-	// Parse TOC from markdown
+	// Pre-process with marked lexer first
+	const tokens = marked.lexer(markdown)
+
+	// Extract TOC from parsed tokens (this correctly skips code blocks)
 	const toc: TocItem[] = []
-	for (const line of markdown.split('\n')) {
-		const m = /^(#{1,3})\s+(.+)$/.exec(line.trim())
-		if (m) {
-			const level = m[1].length
-			const text = m[2].trim()
-			const id = slugify(text)
-			toc.push({ id, text, level })
+	function extractHeadings(tokenList: typeof tokens) {
+		for (const token of tokenList) {
+			if (token.type === 'heading' && token.depth <= 3) {
+				// Use the parsed text (markdown syntax like links/code already stripped)
+				const text = token.text
+				const id = slugify(text)
+				toc.push({ id, text, level: token.depth })
+			}
+			// Recursively check nested tokens (e.g., in blockquotes, lists)
+			if ('tokens' in token && token.tokens) {
+				extractHeadings(token.tokens as typeof tokens)
+			}
 		}
 	}
+	extractHeadings(tokens)
 
 	// Pre-process code blocks with Shiki
 	const codeBlockMap = new Map<string, { html: string; original: string }>()
-	const tokens = marked.lexer(markdown)
+	const shiki = await loadShiki()
 
 	for (const token of tokens) {
 		if (token.type === 'code') {
 			const codeToken = token as Tokens.Code
 			const originalCode = codeToken.text
-			try {
-				const html = await codeToHtml(originalCode, {
-					lang: codeToken.lang || 'text',
-					theme: 'one-light'
-				})
-				const key = `__SHIKI_CODE_${codeBlockMap.size}__`
-				codeBlockMap.set(key, { html, original: originalCode })
-				codeToken.text = key
-			} catch {
-				// Keep original if highlighting fails
-				const key = `__SHIKI_CODE_${codeBlockMap.size}__`
+			const key = `__SHIKI_CODE_${codeBlockMap.size}__`
+
+			if (shiki) {
+				try {
+					const html = await shiki.codeToHtml(originalCode, {
+						lang: codeToken.lang || 'text',
+						theme: 'one-light'
+					})
+					codeBlockMap.set(key, { html, original: originalCode })
+					codeToken.text = key
+				} catch {
+					// Keep original if highlighting fails
+					codeBlockMap.set(key, { html: '', original: originalCode })
+					codeToken.text = key
+				}
+			} else {
+				// Fallback when shiki is not available
 				codeBlockMap.set(key, { html: '', original: originalCode })
 				codeToken.text = key
 			}
@@ -69,12 +102,7 @@ export async function renderMarkdown(markdown: string): Promise<MarkdownRenderRe
 		if (codeData) {
 			// Add data-code attribute with original code for copy functionality
 			// Escape HTML entities for attribute value
-			const escapedCode = codeData.original
-				.replace(/&/g, '&amp;')
-				.replace(/"/g, '&quot;')
-				.replace(/'/g, '&#39;')
-				.replace(/</g, '&lt;')
-				.replace(/>/g, '&gt;')
+			const escapedCode = codeData.original.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/'/g, '&#39;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
 			if (codeData.html) {
 				// Shiki highlighted code
 				return `<pre data-code="${escapedCode}">${codeData.html}</pre>`
