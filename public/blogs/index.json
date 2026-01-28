@@ -42,5 +42,16 @@
     "date": "2025-12-29",
     "summary": "“美国斩杀线”的自嗨里，到底有多少低级谬误",
     "cover": "/blogs/wxfork_article/164e02b775f9816fd19d470e910ce65b.jpg"
+  },
+  {
+    "slug": "ide_issues",
+    "title": "困惑半个月的 Android Studio building 项目极其慢的问题",
+    "tags": [
+    "技术",
+    "交流"
+	],
+	"date": "2026-01-28",
+    "summary": "Android Studio构建项目缓慢问题有很多原因，本文探讨了这部分内容以及本人是如何找到解决犯案的。",
+    "cover": "/blogs/ide_issues/1c84899c2f614bf71be44ef84d6cd11f14ec2c11.jpg"
   }
 ]
