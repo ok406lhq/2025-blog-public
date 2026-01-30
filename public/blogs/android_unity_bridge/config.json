@@ -1,0 +1,12 @@
+{
+  "title": "unity游戏调用SDK支付返回游戏会出现画面移位的问题",
+  "tags": [
+    "Unity",
+    "SDK",
+    "支付",
+    "画面移位"
+  ],
+  "date": "2026-01-30",
+  "summary": "Unity游戏接入UC九游SDK后出现支付弹窗返回画面移位问题。尝试多种方案无效，最终发现移除或设置resizeableActivity属性为true可解决问题。",
+  "cover": "/blogs/android_unity_bridge/47ba7401f40348948acdef43364cf4fa.jpeg"
+}
