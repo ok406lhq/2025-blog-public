@@ -76,13 +76,17 @@ export async function renderMarkdown(markdown: string): Promise<MarkdownRenderRe
 		if (codeData) {
 			// Add data-code attribute with original code for copy functionality
 			// Escape HTML entities for attribute value
-			const escapedCode = codeData.original.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/'/g, '&#39;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+			const escapedCodeForAttr = codeData.original.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/'/g, '&#39;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
 			if (codeData.html) {
 				// Shiki highlighted code
-				return `<pre data-code="${escapedCode}">${codeData.html}</pre>`
+				return `<pre data-code="${escapedCodeForAttr}">${codeData.html}</pre>`
 			}
 			// Fallback for failed highlighting
-			return `<pre data-code="${escapedCode}"><code>${codeData.original}</code></pre>`
+			const escapedCodeForDisplay = codeData.original
+				.replace(/&/g, '&amp;')
+				.replace(/</g, '&lt;')
+				.replace(/>/g, '&gt;')
+			return `<pre data-code="${escapedCodeForAttr}"><code>${escapedCodeForDisplay}</code></pre>`
 		}
 		// Fallback to default (inline code, not code block)
 		return `<code>${token.text}</code>`
@@ -221,8 +225,12 @@ export async function renderMarkdown(markdown: string): Promise<MarkdownRenderRe
 					codeToken.text = key
 				}
 			} else {
-				// Fallback when shiki is not available
-				codeBlockMap.set(key, { html: '', original: originalCode })
+				// Fallback when shiki is not available - ensure HTML entities are escaped
+				const escapedCode = originalCode
+					.replace(/&/g, '&amp;')
+					.replace(/</g, '&lt;')
+					.replace(/>/g, '&gt;')
+				codeBlockMap.set(key, { html: `<code>${escapedCode}</code>`, original: originalCode })
 				codeToken.text = key
 			}
 		}

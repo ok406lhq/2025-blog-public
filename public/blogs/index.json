@@ -66,5 +66,17 @@
     "date": "2026-01-30",
     "summary": "Unity游戏接入UC九游SDK后出现支付弹窗返回画面移位问题。尝试多种方案无效，最终发现移除或设置resizeableActivity属性为true可解决问题。",
     "cover": "/blogs/android_unity_bridge/47ba7401f40348948acdef43364cf4fa.jpeg"
+  },
+  {
+    "slug": "harmony_develop",
+     "title": "成长升级路·我的鸿蒙SDK领航者养成记",
+  "tags": [
+    "技术",
+    "交流",
+    "鸿蒙"
+  ],
+  "date": "2026-02-03",
+  "summary": "游戏接入鸿蒙联运SDK套件开发",
+  "cover": "/blogs/harmony_develop/587700923_18069479102455177_6500187014064965461_n.jpg"
   }
 ]
