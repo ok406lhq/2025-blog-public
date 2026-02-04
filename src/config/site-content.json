@@ -60,6 +60,20 @@
 			"value": "lslhq1127@gmail.com",
 			"label": "",
 			"order": 1
+		},
+		{
+			"id": "button-1770197678740",
+			"type": "bilibili",
+			"value": "https://space.bilibili.com/8450535",
+			"label": "",
+			"order": 4
+		},
+		{
+			"id": "button-1770197741230",
+			"type": "link",
+			"value": "https://blog.csdn.net/baidu_34928905?type=blog",
+			"label": "CSDN",
+			"order": 5
 		}
 	],
 	"clockShowSeconds": false,
