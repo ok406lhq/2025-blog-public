@@ -48,10 +48,10 @@
 			"order": 3
 		},
 		{
-			"id": "juejin",
-			"type": "juejin",
-			"value": "https://juejin.cn/user/4212984287600862",
-			"label": "稀土掘金",
+			"id": "csdn",
+			"type": "csdn",
+			"value": "https://blog.csdn.net/baidu_34928905?type=blog",
+			"label": "",
 			"order": 2
 		},
 		{
@@ -67,13 +67,6 @@
 			"value": "https://space.bilibili.com/8450535",
 			"label": "",
 			"order": 4
-		},
-		{
-			"id": "button-1770197741230",
-			"type": "link",
-			"value": "https://blog.csdn.net/baidu_34928905?type=blog",
-			"label": "CSDN",
-			"order": 5
 		}
 	],
 	"clockShowSeconds": false,
