@@ -69,14 +69,26 @@
   },
   {
     "slug": "harmony_develop",
-     "title": "成长升级路·我的鸿蒙SDK领航者养成记",
-  "tags": [
-    "技术",
-    "交流",
-    "鸿蒙"
-  ],
-  "date": "2026-02-03",
-  "summary": "游戏接入鸿蒙联运SDK套件开发",
-  "cover": "/blogs/harmony_develop/587700923_18069479102455177_6500187014064965461_n.jpg"
+    "title": "成长升级路·我的鸿蒙SDK领航者养成记",
+    "tags": [
+      "技术",
+      "交流",
+      "鸿蒙"
+    ],
+    "date": "2026-02-03",
+    "summary": "游戏接入鸿蒙联运SDK套件开发",
+    "cover": "/blogs/harmony_develop/587700923_18069479102455177_6500187014064965461_n.jpg"
+  },
+  {
+    "slug": "ad_issues",
+    "title": "优量汇广告播放失败问题记录",
+    "tags": [
+      "技术",
+      "交流",
+      "问题记录"
+    ],
+    "date": "2026-02-04",
+    "summary": "优量汇广告播放失败问题记录。",
+    "cover": "/blogs/ad_issues/time-top-100-photos-2025-052.webp"
   }
 ]
