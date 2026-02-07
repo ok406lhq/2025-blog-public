@@ -11,28 +11,6 @@
     "cover": "/blogs/texture-format/2c7d9391c47a1876.jpg"
   },
   {
-    "slug": "kuangyeshidai",
-    "title": "狂野时代",
-    "tags": [
-      "影评",
-      "日常"
-    ],
-    "date": "2025-11-22",
-    "summary": "观《狂野时代》后感",
-    "cover": "/blogs/kuangyeshidai/e260bea5dbfda5b7.jpg"
-  },
-  {
-    "slug": "asbuilding_fix",
-    "title": "技术难题",
-    "tags": [
-      "技术",
-      "博客"
-    ],
-    "date": "2025-11-22",
-    "summary": "困惑半个月的 Android Studio building 项目极其慢的问题",
-    "cover": "/blogs/asbuilding_fix/0076T2oMgy1i6r3vpv0vzj31o02lc1kz.jpg"
-  },
-  {
     "slug": "wxfork_article",
     "title": "美国斩杀线",
     "tags": [
@@ -90,5 +68,28 @@
     "date": "2026-02-04",
     "summary": "优量汇广告播放失败问题记录。",
     "cover": "/blogs/ad_issues/time-top-100-photos-2025-052.webp"
+  },
+  {
+    "slug": "decompile_issues",
+    "title": "解决apk包体大于2G无法对齐和签名的问题",
+    "tags": [
+      "反编译",
+      "问题记录"
+    ],
+    "date": "2026-02-07",
+    "summary": "解决apk包体大于2G无法对齐和签名的问题摘要：处理超过2GB的大体积APK时，常见工具zipalign和apksigner会因32位文件偏移限制而报错。文中提供了验证通过的工具版本及下载链接，帮助开发者突破大文件处理限制。",
+    "cover": "/blogs/decompile_issues/11719b83664fbd5f21300fa02d5081c3-1623-1010.jpg"
+  },
+  {
+    "slug": "harmony_develop2",
+    "title": "【鸿蒙心迹】从零开始实战项目，我与鸿蒙共成长",
+    "tags": [
+      "技术",
+      "交流",
+      "鸿蒙"
+    ],
+    "date": "2025-12-10",
+    "summary": "接触鸿蒙的第一课就是在unity游戏项目中接入发行SDK，从一无所知到逐步摸索解决问题，记录下这段成长的历程。",
+    "cover": "/blogs/harmony_develop2/4lzUbaDzI8Pgz5ZQb26UN.png"
   }
 ]
