@@ -91,5 +91,16 @@
     "date": "2025-12-10",
     "summary": "接触鸿蒙的第一课就是在unity游戏项目中接入发行SDK，从一无所知到逐步摸索解决问题，记录下这段成长的历程。",
     "cover": "/blogs/harmony_develop2/4lzUbaDzI8Pgz5ZQb26UN.png"
+  },
+  {
+    "slug": "asbuilding_fix2",
+    "title": "Android项目Java版本兼容性问题排查与解决",
+    "tags": [
+      "技术",
+      "博客"
+    ],
+    "date": "2026-03-26",
+    "summary": "Android gradle报错：组件使用 Java 17 编译的，但是运行时使用的 Java 11 环境。",
+    "cover": "/blogs/asbuilding_fix2/1773370710315_d.jpg"
   }
 ]
