@@ -1,5 +1,17 @@
 [
   {
+    "slug": "qclaw-roast",
+    "title": "QClaw 吐槽大会：腾讯的小龙虾 AI 到底行不行",
+    "tags": [
+      "吐槽",
+      "AI",
+      "腾讯"
+    ],
+    "date": "2026-04-01",
+    "summary": "把 QClaw 的宣传、沙箱限制、生态绑定和产品成熟度放到一起看，一篇不太客气的体验吐槽。",
+    "category": "总结"
+  },
+  {
     "slug": "texture-format",
     "title": "图片格式 —— 关于材质的大小研究",
     "tags": [
