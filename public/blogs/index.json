@@ -1,5 +1,19 @@
 [
   {
+    "slug": "gpt-image-2-poster-cases",
+    "title": "GPT Image 2 海报与插画案例集",
+    "tags": [
+      "GPT Image 2",
+      "AI 绘图",
+      "海报设计",
+      "插画"
+    ],
+    "date": "2026-05-07",
+    "summary": "整理 107 个 GPT Image 2 海报与插画案例，包含本地示例图片与原始提示词，适合直接发布到博客。",
+    "cover": "/blogs/gpt-image-2-poster-cases/poster_zh-CN_assets/001.jpg",
+    "category": "总结"
+  },
+  {
     "slug": "qclaw-roast",
     "title": "QClaw 吐槽大会：腾讯的小龙虾 AI 到底行不行",
     "tags": [
@@ -12,37 +26,50 @@
     "category": "总结"
   },
   {
-    "slug": "texture-format",
-    "title": "图片格式 —— 关于材质的大小研究",
-    "tags": [
-      "图片压缩",
-      "webp"
-    ],
-    "date": "2025-11-25",
-    "summary": "压缩图片的讨论",
-    "cover": "/blogs/texture-format/2c7d9391c47a1876.jpg"
-  },
-  {
-    "slug": "wxfork_article",
-    "title": "美国斩杀线",
-    "tags": [
-      "时事",
-      "微信"
-    ],
-    "date": "2025-12-29",
-    "summary": "“美国斩杀线”的自嗨里，到底有多少低级谬误",
-    "cover": "/blogs/wxfork_article/164e02b775f9816fd19d470e910ce65b.jpg"
-  },
-  {
-    "slug": "ide_issues",
-    "title": "困惑半个月的 Android Studio building 项目极其慢的问题",
+    "slug": "asbuilding_fix2",
+    "title": "Android项目Java版本兼容性问题排查与解决",
     "tags": [
       "技术",
-      "交流"
+      "博客"
     ],
-    "date": "2026-01-28",
-    "summary": "Android Studio构建项目缓慢问题有很多原因，本文探讨了这部分内容以及本人是如何找到解决犯案的。",
-    "cover": "/blogs/ide_issues/1c84899c2f614bf71be44ef84d6cd11f14ec2c11.jpg"
+    "date": "2026-03-26",
+    "summary": "Android gradle报错：组件使用 Java 17 编译的，但是运行时使用的 Java 11 环境。",
+    "cover": "/blogs/asbuilding_fix2/1773370710315_d.jpg"
+  },
+  {
+    "slug": "decompile_issues",
+    "title": "解决apk包体大于2G无法对齐和签名的问题",
+    "tags": [
+      "反编译",
+      "问题记录"
+    ],
+    "date": "2026-02-07",
+    "summary": "解决apk包体大于2G无法对齐和签名的问题摘要：处理超过2GB的大体积APK时，常见工具zipalign和apksigner会因32位文件偏移限制而报错。文中提供了验证通过的工具版本及下载链接，帮助开发者突破大文件处理限制。",
+    "cover": "/blogs/decompile_issues/11719b83664fbd5f21300fa02d5081c3-1623-1010.jpg"
+  },
+  {
+    "slug": "ad_issues",
+    "title": "优量汇广告播放失败问题记录",
+    "tags": [
+      "技术",
+      "交流",
+      "问题记录"
+    ],
+    "date": "2026-02-04",
+    "summary": "优量汇广告播放失败问题记录。",
+    "cover": "/blogs/ad_issues/time-top-100-photos-2025-052.webp"
+  },
+  {
+    "slug": "harmony_develop",
+    "title": "成长升级路·我的鸿蒙SDK领航者养成记",
+    "tags": [
+      "技术",
+      "交流",
+      "鸿蒙"
+    ],
+    "date": "2026-02-03",
+    "summary": "游戏接入鸿蒙联运SDK套件开发",
+    "cover": "/blogs/harmony_develop/587700923_18069479102455177_6500187014064965461_n.jpg"
   },
   {
     "slug": "android_unity_bridge",
@@ -58,39 +85,26 @@
     "cover": "/blogs/android_unity_bridge/47ba7401f40348948acdef43364cf4fa.jpeg"
   },
   {
-    "slug": "harmony_develop",
-    "title": "成长升级路·我的鸿蒙SDK领航者养成记",
+    "slug": "ide_issues",
+    "title": "困惑半个月的 Android Studio building 项目极其慢的问题",
     "tags": [
       "技术",
-      "交流",
-      "鸿蒙"
+      "交流"
     ],
-    "date": "2026-02-03",
-    "summary": "游戏接入鸿蒙联运SDK套件开发",
-    "cover": "/blogs/harmony_develop/587700923_18069479102455177_6500187014064965461_n.jpg"
+    "date": "2026-01-28",
+    "summary": "Android Studio构建项目缓慢问题有很多原因，本文探讨了这部分内容以及本人是如何找到解决犯案的。",
+    "cover": "/blogs/ide_issues/1c84899c2f614bf71be44ef84d6cd11f14ec2c11.jpg"
   },
   {
-    "slug": "ad_issues",
-    "title": "优量汇广告播放失败问题记录",
+    "slug": "wxfork_article",
+    "title": "美国斩杀线",
     "tags": [
-      "技术",
-      "交流",
-      "问题记录"
+      "时事",
+      "微信"
     ],
-    "date": "2026-02-04",
-    "summary": "优量汇广告播放失败问题记录。",
-    "cover": "/blogs/ad_issues/time-top-100-photos-2025-052.webp"
-  },
-  {
-    "slug": "decompile_issues",
-    "title": "解决apk包体大于2G无法对齐和签名的问题",
-    "tags": [
-      "反编译",
-      "问题记录"
-    ],
-    "date": "2026-02-07",
-    "summary": "解决apk包体大于2G无法对齐和签名的问题摘要：处理超过2GB的大体积APK时，常见工具zipalign和apksigner会因32位文件偏移限制而报错。文中提供了验证通过的工具版本及下载链接，帮助开发者突破大文件处理限制。",
-    "cover": "/blogs/decompile_issues/11719b83664fbd5f21300fa02d5081c3-1623-1010.jpg"
+    "date": "2025-12-29",
+    "summary": "“美国斩杀线”的自嗨里，到底有多少低级谬误",
+    "cover": "/blogs/wxfork_article/164e02b775f9816fd19d470e910ce65b.jpg"
   },
   {
     "slug": "harmony_develop2",
@@ -105,14 +119,14 @@
     "cover": "/blogs/harmony_develop2/4lzUbaDzI8Pgz5ZQb26UN.png"
   },
   {
-    "slug": "asbuilding_fix2",
-    "title": "Android项目Java版本兼容性问题排查与解决",
+    "slug": "texture-format",
+    "title": "图片格式 —— 关于材质的大小研究",
     "tags": [
-      "技术",
-      "博客"
+      "图片压缩",
+      "webp"
     ],
-    "date": "2026-03-26",
-    "summary": "Android gradle报错：组件使用 Java 17 编译的，但是运行时使用的 Java 11 环境。",
-    "cover": "/blogs/asbuilding_fix2/1773370710315_d.jpg"
+    "date": "2025-11-25",
+    "summary": "压缩图片的讨论",
+    "cover": "/blogs/texture-format/2c7d9391c47a1876.jpg"
   }
 ]
